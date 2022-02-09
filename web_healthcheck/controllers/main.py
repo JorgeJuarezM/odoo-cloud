@@ -5,6 +5,6 @@ from odoo import http
 
 
 class HealthCheckController(http.Controller):
-    @http.route("/healthcheck", methods=["GET"], type="json", auth="none")
+    @http.route("/healthcheck", methods=["GET"], type="http", auth="none")
     def healthcheck(self, **kwargs):
         return str(kwargs)
