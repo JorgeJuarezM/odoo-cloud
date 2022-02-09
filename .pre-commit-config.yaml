@@ -40,7 +40,7 @@ repos:
           - -d
           - ./
           - -m
-          - _metaPackage
+          - odoo-cloud-tools
       - id: setuptools-odoo-get-requirements
         args:
           - --output
