@@ -36,11 +36,6 @@ repos:
     rev: 3.0.3
     hooks:
       - id: setuptools-odoo-make-default
-        args:
-          - -d
-          - ./
-          - -m
-          - odoo-cloud-tools
       - id: setuptools-odoo-get-requirements
         args:
           - --output
