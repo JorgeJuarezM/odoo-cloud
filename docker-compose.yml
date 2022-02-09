@@ -2,15 +2,17 @@ version: "3.1"
 services:
   web:
     image: odoo:14.0-test
-    build: .
+    build:
+      context: .
+      args:
+        ODOO_ENV: "dev"
     depends_on:
       - db
     ports:
       - "8069:8069"
     volumes:
       - odoo-web-data:/var/lib/odoo
-    #      - ./config:/etc/odoo
-    #      - ./addons:/mnt/extra-addons
+      - ./web_healthcheck:/usr/local/lib/python3.7/dist-packages/odoo/addons/web_healthcheck/
     environment:
       - DB_PASSWORD=odoo
   db:
