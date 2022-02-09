@@ -36,6 +36,11 @@ repos:
     rev: 3.0.3
     hooks:
       - id: setuptools-odoo-make-default
+        args:
+          - -d
+          - ./
+          - -m
+          - _metaPackage
       - id: setuptools-odoo-get-requirements
         args:
           - --output
